@@ -12,12 +12,12 @@ CREATE TABLE object_storage (
 
 CREATE TABLE object_organization_name ( 
   serial_number VARCHAR(7) PRIMARY KEY,
-  name_organization VARCHAR,
+  name_organization VARCHAR PRIMARY KEY,
   FOREIGN KEY(serial_number) REFERENCES object_storage(serial_number)
 );
 
 CREATE TABLE creator_organization ( 
-  name_organization VARCHAR NOT NULL PRIMARY KEY,
+  name_organization VARCHAR NOT NULL,
   firs_name VARCHAR NOT NULL,
   last_name VARCHAR NOT NULL
 );
